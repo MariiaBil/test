@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Über mich</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="header">
+        <a href="../ivanHomeProject/index.html">Zurück zu hallo</a>
+        <a href="../ivanHomeProject/aboutMe.html">Steckbrief</a>
+        <a href="../ivanHomeProject/myPhoto.html">Fotostory</a>
+        <a href="../ivanHomeProject/photomontage.html">Fotomontage</a>
+    </div> 
+
+    <div class="gallery">
+        <div class="gallery-container">
+            <img src="../ivanHomeProject/images/photo1.jpg">
+            <img src="../ivanHomeProject/images/photo2.jpg">
+            <img src="../ivanHomeProject/images/photo3.jpg">
+            <img src="../ivanHomeProject/images/photo4.jpg">
+            <img src="../ivanHomeProject/images/photo5.jpg">
+        </div>
+
+        <div class="imgButtons">
+            <button class= "scrollButton" onclick="scrollGallery(-1)"><</button>
+            <button class = "scrollButton" onclick="scrollGallery(1)">></button>
+        </div>
+    </div>
+        
+    <script>
+        const galleryContainer = document.querySelector('.gallery-container');
+        const galleryButtons = document.querySelectorAll('.gallery button');
+        let currentPhotoIndex = 0;
+    
+        function scrollGallery(direction) {
+          currentPhotoIndex += direction;
+          const galleryWidth = galleryContainer.clientWidth;
+          const targetScroll = currentPhotoIndex * galleryWidth;
+          galleryContainer.style.transform = `translateX(-${targetScroll}px)`;
+        }
+    </script>
+
+</body>
+</html>
