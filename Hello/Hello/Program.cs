@@ -20,6 +20,8 @@ namespace Hello
             var Zahl2 = Console.ReadLine();
             int Zahl22 = Convert.ToInt32(Zahl2);
 
+            int AUGEN = Convert.ToInt32(Zahl2);
+
             if (Zahl11 == 5 || Zahl11 == 10)
                 Console.WriteLine(Zahl11);
             else
